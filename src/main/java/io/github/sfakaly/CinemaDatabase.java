@@ -1,5 +1,9 @@
 package io.github.sfakaly;
 
+import io.github.sfakaly.Models.Movie;
+import io.github.sfakaly.Models.Session;
+import io.github.sfakaly.Models.Ticket;
+
 import java.util.ArrayList;
 import java.util.List;
 
