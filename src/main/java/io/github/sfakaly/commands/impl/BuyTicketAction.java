@@ -7,10 +7,11 @@ import java.util.Scanner;
 
 public class BuyTicketAction implements MenuAction {
     private BookingService bookingService;
-    private Scanner scanner = new Scanner(System.in);
+    private Scanner scanner;
 
-    public BuyTicketAction(BookingService service) {
-
+    public BuyTicketAction(BookingService bookingService, Scanner scanner) {
+        this.bookingService = bookingService;
+        this.scanner = scanner;
     }
 
     @Override
