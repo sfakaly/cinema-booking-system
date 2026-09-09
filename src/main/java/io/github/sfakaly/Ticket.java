@@ -1,12 +1,15 @@
 package io.github.sfakaly;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class Ticket {
+    private static final AtomicInteger idCounter = new AtomicInteger(1);
     private int id;
     private int sessionId;
     private String customerName;
 
-    public Ticket(int id, int sessionId, String customerName) {
-        this.id = id;
+    public Ticket( int sessionId, String customerName) {
+        this.id = idCounter.getAndIncrement();
         this.sessionId = sessionId;
         this.customerName = customerName;
     }
