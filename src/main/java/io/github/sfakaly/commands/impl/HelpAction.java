@@ -18,6 +18,7 @@ public class HelpAction implements MenuAction {
         for (MenuAction action: commands.values()) {
             System.out.printf("%d — %s\n", action.getCode(), action.getDescription());
         }
+        System.out.println();
     }
 
     public String getDescription() {

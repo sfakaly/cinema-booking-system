@@ -13,6 +13,10 @@ public class ShowAllPurchasedTicketAction implements MenuAction {
 
     @Override
     public void execute() {
+        if (db.getTickets().isEmpty()) {
+            System.out.println("\nNo purchased tickets\n");
+            return;
+        }
         for (Ticket ticket: db.getTickets()) {
             System.out.println(ticket);
         }

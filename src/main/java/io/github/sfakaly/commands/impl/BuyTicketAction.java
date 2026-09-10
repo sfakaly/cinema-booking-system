@@ -17,6 +17,7 @@ public class BuyTicketAction implements MenuAction {
 
     @Override
     public void execute() {
+        System.out.println();
         int sessionId = ui.readInt("Enter the session id");
         String customerName = ui.readString("Enter your name");
 

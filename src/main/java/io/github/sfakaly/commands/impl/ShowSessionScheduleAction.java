@@ -13,6 +13,10 @@ public class ShowSessionScheduleAction implements MenuAction {
 
     @Override
     public void execute() {
+        if (db.getSessions().isEmpty()) {
+            System.out.println("\nNo available sessions\n");
+            return;
+        }
         for (Session session: db.getSessions()) {
             System.out.println(session);
         }
