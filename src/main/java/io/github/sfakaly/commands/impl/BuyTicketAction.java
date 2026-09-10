@@ -29,7 +29,7 @@ public class BuyTicketAction implements MenuAction {
 
     @Override
     public String getDescription() {
-        return "";
+        return "buy a ticket";
     }
 
     private int getSessionId() {
