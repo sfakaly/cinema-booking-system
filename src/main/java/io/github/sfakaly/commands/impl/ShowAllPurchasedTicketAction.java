@@ -22,4 +22,9 @@ public class ShowAllPurchasedTicketAction implements MenuAction {
     public String getDescription() {
         return "Show all bought tickets";
     }
+
+    @Override
+    public int getCode() {
+        return 3;
+    }
 }

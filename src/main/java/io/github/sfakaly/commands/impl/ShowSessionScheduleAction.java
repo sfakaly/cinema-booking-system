@@ -22,4 +22,9 @@ public class ShowSessionScheduleAction implements MenuAction {
     public String getDescription() {
         return "Show session time";
     }
+
+    @Override
+    public int getCode() {
+        return 1;
+    }
 }

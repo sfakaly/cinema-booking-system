@@ -32,4 +32,9 @@ public class BuyTicketAction implements MenuAction {
     public String getDescription() {
         return "buy a ticket";
     }
+
+    @Override
+    public int getCode() {
+        return 2;
+    }
 }
