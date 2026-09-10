@@ -1,7 +1,7 @@
 package io.github.sfakaly;
 
-import io.github.sfakaly.Models.Session;
-import io.github.sfakaly.Models.Ticket;
+import io.github.sfakaly.models.Session;
+import io.github.sfakaly.models.Ticket;
 
 public class BookingService {
     private CinemaDatabase db;

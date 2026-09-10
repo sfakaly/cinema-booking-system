@@ -1,4 +1,4 @@
-package io.github.sfakaly.Models;
+package io.github.sfakaly.models;
 
 public class Session {
     private int id;

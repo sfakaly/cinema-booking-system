@@ -1,4 +1,4 @@
-package io.github.sfakaly.Models;
+package io.github.sfakaly.models;
 
 public class Movie {
     private int id;

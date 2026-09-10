@@ -1,4 +1,4 @@
-package io.github.sfakaly.Models;
+package io.github.sfakaly.models;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
