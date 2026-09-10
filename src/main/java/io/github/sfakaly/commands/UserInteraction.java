@@ -3,7 +3,7 @@ package io.github.sfakaly.commands;
 import java.util.Scanner;
 
 public class UserInteraction {
-    Scanner scanner = new Scanner(System.in);
+    private final Scanner scanner = new Scanner(System.in);
 
     public String readString(String prompt) {
         System.out.printf("> %s:", prompt);

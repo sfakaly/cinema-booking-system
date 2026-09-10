@@ -2,43 +2,34 @@ package io.github.sfakaly.commands.impl;
 
 import io.github.sfakaly.BookingService;
 import io.github.sfakaly.commands.MenuAction;
+import io.github.sfakaly.commands.UserInteraction;
 
 import java.util.Scanner;
 
 public class BuyTicketAction implements MenuAction {
     private BookingService bookingService;
-    private Scanner scanner;
+    private UserInteraction ui;
 
-    public BuyTicketAction(BookingService bookingService, Scanner scanner) {
+    public BuyTicketAction(BookingService bookingService, UserInteraction ui) {
         this.bookingService = bookingService;
-        this.scanner = scanner;
+        this.ui = ui;
     }
 
     @Override
     public void execute() {
-        int sessionId = getSessionId();
-        String customerName = getCustomerName();
+        int sessionId = ui.readInt("Enter the session id");
+        String customerName = ui.readString("Enter your name");
 
         boolean success = bookingService.buyTicket(sessionId, customerName);
         if (success) {
-            System.out.println("✅ You Successfully buy a ticket!");
+            ui.printSuccessMessage("You Successfully buy a ticket!");
         } else {
-            System.out.println("❌ Oh no! You can't buy a ticket.");
+            ui.printError("Oh no! You can't buy a ticket.");
         }
     }
 
     @Override
     public String getDescription() {
         return "buy a ticket";
-    }
-
-    private int getSessionId() {
-        System.out.print("Enter the session id: ");
-        return scanner.nextInt();
-    }
-
-    private String getCustomerName() {
-        System.out.print("Enter your name: ");
-        return scanner.nextLine();
     }
 }
