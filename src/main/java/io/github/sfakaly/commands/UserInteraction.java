@@ -6,8 +6,12 @@ public class UserInteraction {
     private final Scanner scanner = new Scanner(System.in);
 
     public String readString(String prompt) {
-        System.out.printf("> %s:", prompt);
-        return scanner.nextLine().trim().toLowerCase();
+        while (true) {
+            System.out.printf("> %s: ", prompt);
+            String input = scanner.nextLine().trim().toLowerCase();
+            if (input.isBlank()) printError("You nothing was entered");
+            return input;
+        }
     }
 
     public int readInt(String prompt) {
